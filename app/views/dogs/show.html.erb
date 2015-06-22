@@ -7,7 +7,7 @@
 
 <p>
   <strong>Owner:</strong>
-  <%= @dog.owner %>
+  <%= "#{@dog.owner.first_name} #{@dog.owner.last_name}" %>
 </p>
 
 <p>
@@ -17,7 +17,7 @@
 
 <p>
   <strong>Dob:</strong>
-  <%= @dog.dob %>
+  <%= @dog.dob.stamp_like('January 1, 2015') %>
 </p>
 
 <p>

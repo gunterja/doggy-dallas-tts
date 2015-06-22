@@ -2,11 +2,11 @@
 
 <h1>Listing Dogs</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Owner</th>
+      <th>Last</th>
       <th>Breed</th>
       <th>Dob</th>
       <th>Vet</th>
@@ -21,7 +21,7 @@
     <% @dogs.each do |dog| %>
       <tr>
         <td><%= dog.name %></td>
-        <td><%= dog.owner %></td>
+        <td><%= dog.owner.last_name %></td>
         <td><%= dog.breed %></td>
         <td><%= dog.dob %></td>
         <td><%= dog.vet %></td>

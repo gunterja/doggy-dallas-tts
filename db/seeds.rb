@@ -11,5 +11,5 @@ breeds = Breed.create([
   { breed: 'Jack Russel Terrier'},
   { breed: 'Austrailian Shepherd'},
   { breed: 'Mixed Breed'},
-  { breed: 'Poodle' }
+  { breed: 'Poodle'}
 ])
