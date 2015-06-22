@@ -1,0 +1,16 @@
+class CreateDogs < ActiveRecord::Migration
+  def change
+    create_table :dogs do |t|
+      t.string :name
+      t.references :owner, index: true, foreign_key: true
+      t.references :breed, index: true, foreign_key: true
+      t.date :dob
+      t.string :vet
+      t.string :vet_phone
+      t.boolean :in_daycare
+      t.string :dietary_restrictions
+
+      t.timestamps null: false
+    end
+  end
+end
