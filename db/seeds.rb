@@ -9,7 +9,13 @@
 breeds = Breed.create([
   { breed: 'Australian Shepherd'},
   { breed: 'Jack Russel Terrier'},
-  { breed: 'Austrailian Shepherd'},
+  { breed: 'German Shepherd'},
   { breed: 'Mixed Breed'},
-  { breed: 'Poodle'}
+  { breed: 'Poodle'},
+  { breed: 'Rottweiler'},
+  { breed: 'Chihuahua'},
+  { breed: 'Dachsund'},
+  { breed: 'Pit Mix'},
+  { breed: 'Huskie'},
+  { breed: 'Mastiff'}
 ])
