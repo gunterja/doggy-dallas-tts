@@ -2,36 +2,20 @@
 
 <h1>Listing Dogs</h1>
 
-   <div class="row">
-   <% @dogs.each do |dog| %>
-     <div class="col-md-3">
-       <div class="panel panel-default <%= 'panel-success' if dog.in_daycare %>">
-         <div class="panel-heading">
-           <h3 class="panel-title"><%= dog.name %> <%= dog.owner.last_name %></h3>
-         </div>
-         <div class="panel-body">
-           <%= image_tag dog.avatar.url(:medium), class: "img-responsive" %>
-         </div>
-         <div class="panel-footer">
-           In Daycare? <%= dog.in_daycare ? 'Yes':'No' %>
+<%= link_to 'New Dog', new_dog_path, class: "btn btn-default btn-xs", remote: true %>
+<div id="dog-form">
+</div>
 
-           <%= link_to dog do %>
-            <%= fa_icon 'eye'%>
-              <% end %>
+<br>
+<br>
 
-           <%= link_to edit_dog_path(dog) do %>
-              <%= fa_icon 'pencil' %>
-           <% end %>
+  <div class="row">
 
-           <%= link_to dog, method: :delete, data: { confirm: 'Are you sure?' } do %>
-              <%= fa_icon 'trash-o' %>
-           <% end %>
-         </div>
-       </div> <!-- panel -->
-     </div> <!-- col -->
-   <% end %>
+    <div id="dogs">
+      <%= render @dogs %>
+    </div>
 
-</div> <!-- row -->
+  </div> <!-- row -->
 <br>
 
 <%= link_to 'New Dog', new_dog_path, class: "btn btn-default" %>

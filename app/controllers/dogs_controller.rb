@@ -33,13 +33,16 @@ class DogsController < ApplicationController
   # POST /dogs.json
   def create
     @dog = Dog.new(dog_params)
+    @dog = Dog.all
 
     respond_to do |format|
       if @dog.save
         format.html { redirect_to @dog, notice: 'Dog was successfully created.' }
+        format.js {}
         format.json { render :show, status: :created, location: @dog }
       else
         format.html { render :new }
+        format.js { render :action => "new" }
         format.json { render json: @dog.errors, status: :unprocessable_entity }
       end
     end
@@ -50,7 +53,7 @@ class DogsController < ApplicationController
   def update
     respond_to do |format|
       if @dog.update(dog_params)
-        format.html { redirect_to @dog, notice: 'Dog was successfully updated.' }
+        format.html { redirect_to dogs_path, notice: 'Dog was successfully updated.' }
         format.json { render :show, status: :ok, location: @dog }
       else
         format.html { render :edit }
