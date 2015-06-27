@@ -33,7 +33,7 @@ class DogsController < ApplicationController
   # POST /dogs.json
   def create
     @dog = Dog.new(dog_params)
-    @dog = Dog.all
+    @dogs = Dog.all
 
     respond_to do |format|
       if @dog.save
