@@ -1,4 +1,4 @@
-## This is one of the projects I built when I was attending TechTalentSouth's bootcamp in Dallas, TX. Summer of 2015. It is very out of date and far from complete but it was one of the more "refined/polished" projects from my very early days of programming.
+=== This is one of the projects I built when I was attending TechTalentSouth's bootcamp in Dallas, TX. Summer of 2015. It is very out of date and far from complete but it was one of the more "refined/polished" projects from my very early days of programming.
 
 == README
 
